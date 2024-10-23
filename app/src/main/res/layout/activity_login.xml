@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="start">
+
+        <!-- Title "Login" -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="@color/primaryColor"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="32dp"/>
+
+        <!-- Email Label -->
+        <TextView
+            android:id="@+id/tvEmailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Email Input with Custom Background -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your email"
+            android:padding="12dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:background="@drawable/text_input_background"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Password Label -->
+        <TextView
+            android:id="@+id/tvPasswordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Password Input with Custom Background -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_input_background"
+            android:paddingRight="16dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your password"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:background="@drawable/text_input_background"
+                android:inputType="textPassword"
+                android:layout_toStartOf="@id/togglePasswordVisibility"
+                android:layout_marginEnd="8dp"/> <!-- Add some margin for better spacing -->
+
+            <ImageButton
+                android:id="@+id/togglePasswordVisibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@drawable/ic_visibility_off"
+                android:contentDescription="Toggle password visibility"/>
+
+        </RelativeLayout>
+
+
+        <!-- Log In Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:background="@drawable/text_input_background"
+            android:textColor="@color/primaryColor"
+            android:textStyle="bold"
+            android:paddingHorizontal="32dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="42dp"/>
+
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:paddingHorizontal="32dp"
+            android:background="@drawable/text_input_background"
+            android:textColor="@color/primaryColor"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginVertical="24dp" />
+        <TextView
+            android:id="@+id/forgotPasswordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/otherSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or Sign In with"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <!-- Instagram Icon Button -->
+            <ImageButton
+                android:id="@+id/instagramButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_insta"
+                android:contentDescription="Instagram"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Google Icon Button -->
+            <ImageButton
+                android:id="@+id/googleButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_google"
+                android:contentDescription="Google"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp" />
+
+            <!-- WhatsApp Icon Button -->
+            <ImageButton
+                android:id="@+id/whatsappButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_whatsapp"
+                android:layout_weight="1"
+                android:contentDescription="WhatsApp"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Facebook Icon Button -->
+            <ImageButton
+                android:id="@+id/facebookButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_facebook"
+                android:layout_weight="1"
+                android:contentDescription="Facebook" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
